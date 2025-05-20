@@ -1,0 +1,12 @@
+[
+  {
+    "patent_id": "KR1020230012345A",
+    "title": "온디바이스 AI 추론을 위한 경량화 네트워크",
+    "applicant": "스타트업A",
+    "filing_date": "2023-05-11",
+    "claims": "1. 온디바이스 환경에서의 AI 추론 효율화 방법 ...",
+    "abstract": "이 특허는 경량화된 인공지능 네트워크를 통해 ...",
+    "language": "ko",
+    "domain": "Edge AI"
+  }
+] 

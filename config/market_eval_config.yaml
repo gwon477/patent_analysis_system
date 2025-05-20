@@ -1,0 +1,17 @@
+api:
+  search_max_results: 5
+  use_tavily: false
+cache:
+  dir: ./data/market_cache
+  enabled: true
+  expiry_days: 7
+react_agent:
+  keyword_expansions: 3
+  max_iterations: 3
+score_ranges:
+  growth_rate:
+    max_value: 30.0
+    min_value: 3.0
+  market_size:
+    max_value: 500
+    min_value: 1

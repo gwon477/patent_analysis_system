@@ -1,0 +1,45 @@
+# 특허 평가 보고서
+
+**작성일**: {{ today_date }}
+**페르소나**: {{ persona }}
+
+## 1. 개요
+
+본 보고서는 평가된 특허 포트폴리오 중 상위 5개 특허에 대한 기술성, 시장성, 적합성을 분석하여 투자 및 개발 방향을 제시합니다. 평가는 기술 평가와 시장 평가를 바탕으로 종합적인 적합성 분석을 통해 이루어졌습니다.
+
+## 2. 평가 요약
+
+| 순위 | 특허번호 | 특허제목 | 기술점수 | 시장점수 | 적합성점수 | 총점 | 등급 | 추천 액션 |
+|-----|---------|---------|---------|---------|----------|-----|-----|---------|
+{% for row in top_patents %}
+| {{ loop.index }} | {{ row.patent_id }} | {{ row.title }} | {{ row.tech_score }} | {{ row.market_score }} | {{ row.alignment_score }} | {{ row.total_score }} | {{ row.grade }} | {{ row.action_summary }} |
+{% endfor %}
+
+## 3. 특허별 상세 평가
+
+{% for row in top_patents %}
+### [{{ row.patent_id }}] {{ row.title }}
+
+**총점**: {{ row.total_score }}/5.0 (등급: {{ row.grade }})
+
+#### 기술 평가 ({{ row.tech_score }}/5.0)
+- 독창성: {{ row.tech_scores.originality_score }}/5.0
+- 트렌드 적합성: {{ row.tech_scores.trend_fit_score }}/5.0
+- **기술 요약**: {{ row.tech_summary }}
+
+#### 시장 평가 ({{ row.market_score }}/5.0)
+- 시장 규모: {{ row.market_scores.market_size_score }}/5.0
+- 성장 잠재력: {{ row.market_scores.growth_potential_score }}/5.0
+- **시장 요약**: {{ row.market_summary }}
+
+#### 적합성 평가 ({{ row.alignment_score }}/5.0)
+- **분석**: {{ row.alignment_reason }}
+
+#### 추천 액션
+{{ row.recommended_action }}
+
+{% endfor %}
+
+## 4. 종합 평가 및 권고사항
+
+{{ overall_assessment }} 

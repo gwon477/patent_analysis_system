@@ -1,0 +1,20 @@
+langchain-core~=0.2.5 # 충돌 해결을 위해 버전 명시적으로 지정
+langchain~=0.2.6
+langchain_community~=0.2.5 # langchain-core 0.2.x와 호환되는 버전으로 명시적 추가
+langgraph~=0.0.69 # langchain, langchain-core와 호환되는 버전으로 업데이트
+# chromadb>=0.4.0 # langchain-chroma가 특정 버전의 chromadb에 의존할 수 있음
+chromadb==0.4.22 # ChromaDB 버전 (충돌 시 0.4.15 또는 0.5.x 와 langchain-chroma 최신 조합 고려)
+openai==1.30.1 # langchain-openai 0.1.8 호환성 및 충돌 해결을 위해 버전 업데이트 (이전 1.6.1)
+jinja2==3.1.3
+tqdm==4.66.2 # 진행 상태 표시
+pyyaml==6.0.1 # YAML 파일 파싱
+sentence-transformers~=3.0.1 # ImportError 해결을 위해 최신 안정 버전으로 업데이트 (이전 2.2.2)
+huggingface-hub~=0.23.4 # sentence-transformers와의 호환성을 위해 명시적으로 추가
+requests==2.31.0 # HTTP 요청 라이브러리
+tiktoken>=0.7.0,<1.0.0 # 명시적으로 버전 지정하여 의존성 충돌 해결
+# langchain 통합을 위한 최신 방식 (langchain-community 대신)
+langchain-openai==0.1.8 # OpenAI LLM (langchain-core>=0.2.2, openai>=1.26.0,<2.0.0 요구)
+langchain-chroma>=0.1.0 # 새로운 Chroma import 방식
+python-dotenv==1.0.1 # .env 파일 로드를 위해 추가 
+rank-bm25==0.2.2 # BM25 검색을 위해 추가
+httpx==0.25.0 # HTTP 요청 라이브러리

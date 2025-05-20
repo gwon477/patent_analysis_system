@@ -1,0 +1,5 @@
+language: ko
+embedding_model_ko: "jhgan/ko-sroberta-multitask"
+embedding_model_en: "text-embedding-ada-002"
+default_persona: "investor"
+recent_years: 3 

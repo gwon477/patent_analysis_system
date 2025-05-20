@@ -1,0 +1,27 @@
+# 시장 분석 요약
+
+## 기본 정보
+- 특허 ID: {{ patent_id }}
+- 특허 제목: {{ title }}
+
+## 시장 정보
+{{ market_info }}
+
+## 시장 분석
+{% if market_size is defined and market_size > 0 %}
+- 시장 규모: {{ market_size }} 억 달러
+{% else %}
+- 시장 규모: 정보 없음
+{% endif %}
+
+{% if growth_rate is defined and growth_rate > 0 %}
+- 성장률(CAGR): {{ growth_rate }}%
+{% else %}
+- 성장률(CAGR): 정보 없음
+{% endif %}
+
+- 시장 크기 점수: {{ market_size_score }}/5.0
+- 성장 잠재력 점수: {{ growth_potential_score }}/5.0
+
+## 종합 평가
+{{ evaluation }} 

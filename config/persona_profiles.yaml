@@ -1,0 +1,16 @@
+investor:
+    language: "ko"
+    report_detail: "summary"
+    weights:
+        originality: 0.4
+        trend_fit: 0.2
+        market_size: 0.3
+        growth_potential: 0.1
+strategy:
+    language: "ko"
+    report_detail: "detail"
+    weights:
+        originality: 0.2
+        trend_fit: 0.3
+        market_size: 0.2
+        growth_potential: 0.3 
